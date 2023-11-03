@@ -8,7 +8,7 @@ import { getTasks } from '../controllers/taskController.js'
 //   getUsers,
 //   postUser,
 //   putUser,
-// } from '../controllers/userControllers.js'; cambiar esto
+// } from '../controllers/userControllers.js';
 
 // import isAdmin from '../middlewares/isAdmin.js';
 // import isAuthenticated from '../middlewares/isAuthenticated.js';
