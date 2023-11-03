@@ -13,3 +13,31 @@ export const getTasks = async (_, res) => {
     });
   }
 };
+
+export const postTask = async (req, res) => {
+  const { body } = req;
+
+  const newTask = new TaskCollection({
+    name: body.name,
+  });
+
+  try {
+    await newTask.save();
+
+    res.status(201).json({
+      message: 'Tarea creada con éxito ✨.',
+    });
+  } catch (e) {
+    if (e.message.includes('duplicate')) {
+      res.status(400).json({
+        message: 'La tarea ya es existente.',
+      });
+      return;
+    }
+
+    res.status(500).json({
+      message: 'Ocurrió un error guardando la tarea.',
+      error: e.message,
+    });
+  }
+};

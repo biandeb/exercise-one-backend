@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { getTasks } from '../controllers/taskController.js';
+import { getTasks, postTask } from '../controllers/taskController.js';
 
 // import isAdmin from '../middlewares/isAdmin.js';
 // import isAuthenticated from '../middlewares/isAuthenticated.js';
@@ -29,6 +29,8 @@ routerTasks.get('/', getTasks);
 // );
 
 // POST -----------
+routerTasks.post('/', postTask);
+
 // routerTasks.post(
 //   '/',
 //   (req, res, next) => validateBody(req, res, next, post_userSchema),
