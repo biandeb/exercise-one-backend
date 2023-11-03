@@ -1,0 +1,19 @@
+{
+  "name": "ejercicio-1",
+  "version": "1.0.0",
+  "description": "Este es el desarrollo del ejercicio número 1, del trabajo práctico de backend, brindado por Rolling Code School",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --platform=node --outfile=dist/index.cjs --minify",
+    "start": "node --env-file=.env dist/index.cjs",
+    "dev": "node --watch --env-file=.env src/index.js",
+    "lint": "eslint . --fix"
+  },
+  "keywords": [
+    "backend",
+    "rolling",
+    "practice"
+  ],
+  "author": "Deblinger, Bianca D",
+  "license": "ISC"
+}
