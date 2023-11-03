@@ -6,8 +6,8 @@ import cors from 'cors';
 
 import taskRoutes from './routes/taskRoutes.js'
 
-// // DB connection establishment
-// import './database/database.js';
+// Conexión a base de datos
+import './database/database.js';
 
 // import routerProducts from './routes/productsRoutes.js';
 // import routerAuth from './routes/authRoutes.js';
