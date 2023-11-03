@@ -4,12 +4,14 @@ import morgan from 'morgan';
 
 import cors from 'cors';
 
+import taskRoutes from './routes/taskRoutes.js'
+
 // // DB connection establishment
 // import './database/database.js';
 
 // import routerProducts from './routes/productsRoutes.js';
 // import routerAuth from './routes/authRoutes.js';
-// import routerUsers from './routes/userRoutes.js';
+
 
 // 1 - Inicializo la aplicación
 const app = express();
@@ -23,6 +25,7 @@ app.use(cors()); // Cross-Origin-Resource-Sharing
 app.use(express.json()); // se prepara para recibir response, body en formato JSON (sino devuelve "undefined")
 
 // 4 - Rutas
+app.use(taskRoutes);
 // app.use('/api/v1/products', routerProducts);
 // app.use('/api/v1/auth', routerAuth);
 // app.use('/api/v1/users', routerUsers);
