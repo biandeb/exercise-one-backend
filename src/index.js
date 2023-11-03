@@ -4,14 +4,13 @@ import morgan from 'morgan';
 
 import cors from 'cors';
 
-import taskRoutes from './routes/taskRoutes.js'
+import taskRoutes from './routes/taskRoutes.js';
 
 // Conexión a base de datos
 import './database/database.js';
 
 // import routerProducts from './routes/productsRoutes.js';
 // import routerAuth from './routes/authRoutes.js';
-
 
 // 1 - Inicializo la aplicación
 const app = express();
@@ -22,7 +21,9 @@ const PORT = process.env.PORT || 5000;
 // 3 - Middlewares (antes y después del controlador)
 app.use(morgan('dev')); // después
 app.use(cors()); // Cross-Origin-Resource-Sharing
-app.use(express.json()); // se prepara para recibir response, body en formato JSON (sino devuelve "undefined")
+app.use(express.json());
+// se prepara para recibir response
+// body en formato JSON (sino devuelve "undefined")
 
 // 4 - Rutas
 app.use(taskRoutes);

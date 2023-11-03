@@ -1,7 +1,6 @@
 import express from 'express';
 
-import { getTasks } from '../controllers/taskController.js'
-
+import { getTasks } from '../controllers/taskController.js';
 
 // import isAdmin from '../middlewares/isAdmin.js';
 // import isAuthenticated from '../middlewares/isAuthenticated.js';
@@ -19,7 +18,7 @@ import { getTasks } from '../controllers/taskController.js'
 const routerTasks = express.Router();
 
 // GET
-routerTasks.get('/', getTasks)
+routerTasks.get('/', getTasks);
 
 // routerTasks.get('/', isAuthenticated, isAdmin, getUsers);
 // routerTasks.get(
