@@ -2,13 +2,6 @@ import express from 'express';
 
 import { getTasks } from '../controllers/taskController.js'
 
-// import {
-//   deleteUser,
-//   getUser,
-//   getUsers,
-//   postUser,
-//   putUser,
-// } from '../controllers/userControllers.js';
 
 // import isAdmin from '../middlewares/isAdmin.js';
 // import isAuthenticated from '../middlewares/isAuthenticated.js';
