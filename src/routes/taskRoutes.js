@@ -1,6 +1,7 @@
 import express from 'express';
 
 import { getTasks, postTask } from '../controllers/taskController.js';
+import { getUsers, postUser } from '../controllers/userController.js';
 
 // import isAdmin from '../middlewares/isAdmin.js';
 // import isAuthenticated from '../middlewares/isAuthenticated.js';
@@ -15,10 +16,11 @@ import { getTasks, postTask } from '../controllers/taskController.js';
 //   put_userSchema,
 // } from '../helpers/validationSchemas/userSchemas.js';
 
-const routerTasks = express.Router();
+const router = express.Router();
 
 // GET
-routerTasks.get('/', getTasks);
+router.get('/', getTasks);
+router.get('/', getUsers);
 
 // routerTasks.get('/', isAuthenticated, isAdmin, getUsers);
 // routerTasks.get(
@@ -29,7 +31,8 @@ routerTasks.get('/', getTasks);
 // );
 
 // POST -----------
-routerTasks.post('/', postTask);
+router.post('/', postTask);
+router.post('/', postUser);
 
 // routerTasks.post(
 //   '/',
@@ -54,4 +57,4 @@ routerTasks.post('/', postTask);
 //   deleteUser,
 // );
 
-export default routerTasks;
+export default router;
